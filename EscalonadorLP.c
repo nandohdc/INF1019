@@ -1,10 +1,10 @@
-/*Escalonador de Processos(Lista de Prioridades)
-INF1019 2015.2 - PUC-RIO
-Professor: Luiz Fernando Seibel
-Nome: Fernando Homem da Costa - 1211971
-      Mateus Ribeiro de Castro - 1213068
-
-*/
+/*Escalonador de Processos(Lista de Prioridades)******
+**INF1019 2015.2 - PUC-RIO****************************
+**Professor: Luiz Fernando Seibel*********************
+**Nome: Fernando Homem da Costa - 1211971*************
+**      Mateus Ribeiro de Castro - 1213068************
+**
+******************************************************/
 
 
 #include<stdio.h>
@@ -40,18 +40,37 @@ Pprocesso inicializaProcesso(int identificador, int prioridade){
 	return proc;
 }
 
+/*Adiciona Processo na Lista de Processos*/
+void adicionaProcesso(Pprocesso *ListaProc, Pprocesso proc){
+	int i = 0;
+	
+	if (ListaProc[0] == NULL){// Se o primeiro elemento da Lista de Processo for nulo, ou seja, sem processos.
+
+		ListaProc[0] = proc;// Adiciona o primeiro processo a lista de processos.
+	}
+
+	else{// Caso já tenha elementos inseridos na lista de Processos.
+		while (ListaProc[i]->prox != NULL){//Vai até o final da lista.
+			i++;
+		}
+		ListaProc[i]->prox = proc;//Muda para quem o ultimo elemento da lista irá apontar.
+	}
+
+}
+
 /*Função de listagem dos processos*/
-void listaProcessos(Pprocesso proc){
-	Pprocesso aux;
+void listaProcessos(Pprocesso *ListaProc){//Printa na tela todos os procesos presente na Lista de Procesos
+	int i = 0;
 	printf("Lista de Processos: /n/n");
 
-	while(aux != NULL) {
-		printf("Processo: %d\tPrioridade: %d\n", aux->id, aux->prio);
-		aux = aux->prox;
+	while (ListaProc[i] != NULL) {
+		printf("Processo: %d\tPrioridade: %d\n", ListaProc[i]->id, ListaProc[i]->prio);
+		i++;
 	}
 	printf("\n");
 }
 
+/*Função de Comparação da Qsort*/
 int ComparaQsort(const void *x, const void *y){
 	const struct processo *comp1 = x;
 	const struct processo *comp2 = y;
@@ -68,8 +87,10 @@ int ComparaQsort(const void *x, const void *y){
 		return 0;
 	}
 }
-void OrdenaProcessos(Pprocesso proc, Pprocesso *ListaProc){
-	int i;
+
+/*Função para contar Elementos da Lista de Processos e Ordenhá-los*/
+void OrdenaProcessos(Pprocesso proc, Pprocesso *ListaProc){/*ORDENADO ---> OBS: ORDENAR PROCESSOS!!!*/
+	int i = 0;
 	Pprocesso aux = proc;
 	
 	if (aux != NULL){
@@ -80,6 +101,3 @@ void OrdenaProcessos(Pprocesso proc, Pprocesso *ListaProc){
 		qsort(ListaProc, i, sizeof(Processo), ComparaQsort);
 	}
 }
-
-
-/*OBS: ORDENAR PROCESSOS!!!*/
