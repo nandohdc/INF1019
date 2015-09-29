@@ -23,6 +23,29 @@ typedef struct processo *Pprocesso;
 /*Declarações de Protótipos de Função*/
 /*************************************/
 
+/*Interpretador de Comandos*/
+void interpretador(char nome[], int prio){
+
+	/*int i = 4;
+	char mensagem[100];
+	scanf("%[^\n]", mensagem);
+
+	while (mensagem[i] != ' ') {
+		nome[i - 4] = mensagem[i];
+		i++;
+	}
+
+	while (mensagem[i] != '\n') {
+		i++;
+	}
+
+	prio = mensagem[i - 1] - 49;
+
+
+	return 0;*/
+}
+
+
 /*Inicialização de Lista de Processos*/
 Pprocesso inicializaProcesso(int identificador, int prioridade){
 	Pprocesso proc;
@@ -56,7 +79,14 @@ void adicionaProcesso(Pprocesso *ListaProc, Pprocesso proc){
 		ListaProc[i]->prox = proc;//Muda para quem o ultimo elemento da lista irá apontar.
 	}
 
+	OrdenaProcessos(ListaProc, proc); //Ordena depois de ter ordenado.
 }
+
+/*Retira Processo da Lista de Processos*/
+/*-----------> Dúvida!
+void retiraProcesso(Pprocesso *ListaProc, Pprocesso proc){
+
+}*/
 
 /*Função de listagem dos processos*/
 void listaProcessos(Pprocesso *ListaProc){//Printa na tela todos os procesos presente na Lista de Procesos
@@ -89,7 +119,7 @@ int ComparaQsort(const void *x, const void *y){
 }
 
 /*Função para contar Elementos da Lista de Processos e Ordenhá-los*/
-void OrdenaProcessos(Pprocesso proc, Pprocesso *ListaProc){/*ORDENADO ---> OBS: ORDENAR PROCESSOS!!!*/
+void OrdenaProcessos(Pprocesso *ListaProc, Pprocesso proc){/*ORDENADO ---> OBS: ORDENAR PROCESSOS!!!*/
 	int i = 0;
 	Pprocesso aux = proc;
 	
