@@ -33,7 +33,7 @@ Pprocesso inicializaProcesso(int identificador, int prioridade){
 		exit(1);
 	}
 
-	proc->id = identificador;
+	proc->id = identificador; 
 	proc->prio = prioridade;
 	proc->prox = NULL;
 
@@ -101,3 +101,26 @@ void OrdenaProcessos(Pprocesso proc, Pprocesso *ListaProc){/*ORDENADO ---> OBS: 
 		qsort(ListaProc, i, sizeof(Processo), ComparaQsort);
 	}
 }
+
+/*Dúvidas:
+interpretador:  
+		Como ler do arquivo texto e armazenar?
+		R:Ler do arquivo texto e armazenar num vetor de string(o nome do arquivo a ser executado) e num int(inteiro relacionado a prioridade).
+		
+		Como ler linha por linha?
+		R: Ainda a pensar, DEVEMOS descartar "exec" e "prioridade".
+		Só precisamos guardar string do nome do arquivo e o int.		
+		
+		Como retirar o processo que já terminou da fila de execução?
+		R: Utilizar kill, ou seja, matar o processo. Também podemos usar o PID do processo.
+
+		Como saber que um processo já terminou de executar?
+		R:Todos os processos serão de loop.
+
+		Como tirar um processo de execução para executar outro?
+		R:SIGSTOP e SIGCONTINUE.
+
+		OBS: Para cada processo criado deverá ter um fork, ou seja, cada processo novo será um filho novo. Para exec lido deverá executar um processo novo.
+Com o PID do processo, conseguiremos para, continuar ou matar o processo.	
+		
+*/
