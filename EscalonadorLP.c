@@ -10,6 +10,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<signal.h>
+#include<sys/types.h>
 
 /*Estrutura de Processos*/
 
@@ -83,23 +85,18 @@ Pprocesso inicializaProcesso(char *nome, int prioridade){
 }
 
 /*Verifica Prioridade*/
-
 int verificaPrioridade(Pprocesso *ListaProc, Pprocesso proc){
-	int i = 0;
 
-	while (ListaProc[i]->prox != NULL){
+	if (ListaProc[0]->prio > proc->prio){ //Prioridade da lista eh maior do que o processo em execucao.
+		return 1;
+	}
 
-		if (ListaProc[i]->prio > proc->prio){ //Prioridade da lista eh maior do que o processo em execucao.
-			return 1;
-		}
+	else if (ListaProc[0]->prio < proc->prio){ //Prioridade da lista eh menor do que o processo em execucao.
+		return -1;
+	}
 
-		else if (ListaProc[i]->prio < proc->prio){ //Prioridade da lista eh menor do que o processo em execucao.
-			return -1;
-		}
-
-		else{//Prioridade da lista eh igual ao processo em execucao.
-			return 0;
-		}
+	else{//Prioridade da lista eh igual ao processo em execucao.
+		return 0;
 	}
 }
 
@@ -125,7 +122,7 @@ void adicionaProcesso(Pprocesso *ListaProc, Pprocesso proc){
 /*Retira Processo da Lista de Processos da fila de pronto*/
 
 Pprocesso retiraProcesso(Pprocesso *ListaProc){//Destaca o primeiro processo da fila de pronto
-	/*NAO SEI SE ESTÁ CERTO, PENSAR MELHOR...
+	
 	Pprocesso ret;
 
 	ret = ListaProc[0];
@@ -133,7 +130,6 @@ Pprocesso retiraProcesso(Pprocesso *ListaProc){//Destaca o primeiro processo da 
 	free(ListaProc[0]);
 
 	return ret;
-	*/
 }
 
 /*Funcao que manda o processo para execução*/
@@ -143,9 +139,27 @@ void mandaExecutar(Pprocesso *ListaProc){
 	com isso só precisamos retirar ele da fila de pronto e mandar executa-lo.*/
 
 	Pprocesso exe;
+	int pid, fpid;
 
-	exe = retiraProcesso(&ListaProc); //Destacou o primeiro processo da lista.
+	exe = retiraProcesso(ListaProc); //Destacou o primeiro processo da lista.
 
+	if ((pid = fork()) < 0){
+		printf("Erro ao forkar! \n");
+		exit(-1);
+	}
+
+	else if (pid == 0){//Son, Filho, hijo.
+		excve(exe->nome,NULL,0);
+
+	}
+	
+	else{//Dad, Pai, Papa.
+		while (verificaPrioridade(ListaProc, exe) != 1){}//enquanto ele nao acha o elemento com maior prioridade, ele irá ficar verificando.
+		kill(pid, SIGSTOP);
+		adicionaProcesso(ListaProc, exe);
+		mandaExecutar(ListaProc);
+
+	}
 
 }
 
