@@ -24,10 +24,10 @@ int interpretador(char nome[100][300], int prio[]){ //Lembrar do teste que fizem
 	int i = 0;
 	char aux;
 
-	while ((scanf("exec %s prioridade= %c", nome[i], aux)) == 2){ //para cada string ou inteiro que quisermos "guardar" precisamos adicionar um nova variavel, com %s só lemos uma string por vez.
+	while (scanf("exec %s prioridade= %c", nome[i], &aux) == 2){ //para cada string ou inteiro que quisermos "guardar" precisamos adicionar um nova variavel, com %s só lemos uma string por vez.
 		prio[i] = aux - '0';
 
-		printf("Nome: %s ---- Prioridade: %c", nome[i], prio[i]); //Só para testar a função, não apagar!
+		printf("Nome: %s ---- Prioridade: %d", nome[i], prio[i]); //Só para testar a função, não apagar!
 		
 		i++;
 	}
@@ -73,7 +73,7 @@ void preencheVetor(Processo vProc[], int elementos, char nome[][300], int priori
 
 	for(i = 0; i < elementos; i++){
 
-		vProc[i] = inicializaProcesso(&nome[i][300], prioridade[i]);
+		vProc[i] = inicializaProcesso(nome[i], prioridade[i]);
 
 	}
 	ordenaVetorProcesso(vProc,elementos);
@@ -92,10 +92,10 @@ Processo retiraEorganiza(Processo vProc[], int elementos){//Destaca o primeiro p
 	vProc[i] = vProc[i+1];
 
 	}
-/*
+
 	vProc[elementos - 1].prioridade = NULL;
-	vProc[elementos - 1].nome = NULL;
-*/	
+	vProc[elementos - 1].nome = '\0';
+	
 	
 	return retirado;
 }
@@ -135,7 +135,7 @@ void mandaExecutar(Processo vProc[], int elementos){
 	Processo pRetirado;
 
 	pRetirado = retiraEorganiza(vProc, elementos);
-	
+	/*
 	if((pid = fork()) < 0){ //Em caso de Erro ao forkar
 		printf("Erro ao forkar!\n");
 		exit(1);
@@ -150,13 +150,13 @@ void mandaExecutar(Processo vProc[], int elementos){
 		kill(pid, SIGSTOP);
 		adicionaProcesso(vProc, elementos, pRetirado);
 		mandaExecutar(vProc, elementos);
-	}
+	}*/
 }
 
 /*Função de listagem dos processos*/
 void listaProcessos(Processo vProc[], int elementos){//Printa na tela todos os procesos presente na Lista de Processos
 	int i;
-	printf("Lista de Processos: /n/n");
+	printf("Lista de Processos: \n\n");
 
 	for(i = 0 ; i < elementos ; i++){
 		printf("Processo: %s ---- Prioridade: %d\n", vProc[i].nome, vProc[i].prioridade);
@@ -203,13 +203,14 @@ int main (void){
 
 	printf("\n%d\n", nprocessos);
 
-	vProc = (Processo*)malloc(elementos*sizeof(Processo));
+	vProc = (Processo*)malloc(nprocessos*sizeof(Processo));
 
 	preencheVetor(vProc, nprocessos, nome, prio);
 
 	listaProcessos(vProc, nprocessos);
-/*
+
 	mandaExecutar(vProc, nprocessos);
-*/
+
 	return 0;	
 }
+
