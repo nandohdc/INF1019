@@ -1,0 +1,1 @@
+exec cpu prioridade= 1
