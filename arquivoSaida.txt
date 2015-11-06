@@ -1,9 +1,0 @@
-oi
-
-
-
-
-Nome: cpu ---- Prioridade: 1
-1
-
-1

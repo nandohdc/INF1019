@@ -1,0 +1,9 @@
+exec io1 prioridade= 2
+
+exec cpu1
+ prioridade= 5
+exec cpu2 prioridade= 3 
+exec io2
+ prioridade= 4
+exec io3
+ prioridade= 1

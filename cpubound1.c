@@ -8,7 +8,7 @@ int main()
 {
 	double numero = 4534541231454564, resultado = 0, temp = 0;
 	int i;
-
+	printf("CPUBOUND1: OLA!\n");
 	for(i = 0;;i++)
 	{
 		for(i=0;i<1000;i++)
@@ -22,6 +22,6 @@ int main()
 		
 		resultado = (numero - temp)+i;
 	}
-
+	printf("CPUBOUND1: TCHAU!\n");
 	return 0;
 }
