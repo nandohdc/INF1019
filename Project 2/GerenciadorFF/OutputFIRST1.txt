@@ -1,0 +1,741 @@
+Processo : 1
+Tempo Restante: 55
+exec: 35 ----- io: 20
+Processo : 2
+Tempo Restante: 20
+exec: 20 ----- io: 0
+Processo : 3
+Tempo Restante: 79
+exec: 70 ----- io: 9
+Processo : 4
+Tempo Restante: 63
+exec: 50 ----- io: 13
+Processo : 5
+Tempo Restante: 10
+exec: 10 ----- io: 0
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 1
+Tempo Restante: 55 ---------- Exec: 35 ---------- IO: 20
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 1
+Tempo Restante: 55 ---------- Exec: 35 ---------- IO: 20
+Memória: 4Mb ---------- Processo: 2
+Tempo Restante: 20 ---------- Exec: 20 ---------- IO: 0
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 1
+Tempo Restante: 55 ---------- Exec: 35 ---------- IO: 20
+Memória: 4Mb ---------- Processo: 2
+Tempo Restante: 20 ---------- Exec: 20 ---------- IO: 0
+Memória: 2Mb ---------- Processo: 3
+Tempo Restante: 79 ---------- Exec: 70 ---------- IO: 9
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #1 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: 2
+Tempo Restante: 20 ---------- Exec: 20 ---------- IO: 0
+Memória: 2Mb ---------- Processo: 3
+Tempo Restante: 79 ---------- Exec: 70 ---------- IO: 9
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+Processo : 4
+Tempo Restante: 63
+exec: 50 ----- io: 13
+Processo : 5
+Tempo Restante: 10
+exec: 10 ----- io: 0
+
+-----------------------Processos em IO-----------------------
+Processo : 1
+Tempo Restante: 45
+exec: 25 ----- io: 20
+
+-----------------------Processos Já Terminados-----------------------
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 63 ---------- Exec: 50 ---------- IO: 13
+Memória: 4Mb ---------- Processo: 2
+Tempo Restante: 20 ---------- Exec: 20 ---------- IO: 0
+Memória: 2Mb ---------- Processo: 3
+Tempo Restante: 79 ---------- Exec: 70 ---------- IO: 9
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #2 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 63 ---------- Exec: 50 ---------- IO: 13
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: 3
+Tempo Restante: 79 ---------- Exec: 70 ---------- IO: 9
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+Processo : 5
+Tempo Restante: 10
+exec: 10 ----- io: 0
+Processo : 2
+Tempo Restante: 10
+exec: 10 ----- io: 0
+
+-----------------------Processos em IO-----------------------
+Processo : 1
+Tempo Restante: 35
+exec: 25 ----- io: 10
+
+-----------------------Processos Já Terminados-----------------------
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #3 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 63 ---------- Exec: 50 ---------- IO: 13
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+Processo : 5
+Tempo Restante: 10
+exec: 10 ----- io: 0
+Processo : 2
+Tempo Restante: 10
+exec: 10 ----- io: 0
+Processo : 1
+Tempo Restante: 25
+exec: 25 ----- io: 0
+Processo : 3
+Tempo Restante: 69
+exec: 60 ----- io: 9
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #4 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+Processo : 5
+Tempo Restante: 10
+exec: 10 ----- io: 0
+Processo : 2
+Tempo Restante: 10
+exec: 10 ----- io: 0
+Processo : 1
+Tempo Restante: 25
+exec: 25 ----- io: 0
+Processo : 3
+Tempo Restante: 69
+exec: 60 ----- io: 9
+
+-----------------------Processos em IO-----------------------
+Processo : 4
+Tempo Restante: 53
+exec: 40 ----- io: 13
+
+-----------------------Processos Já Terminados-----------------------
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 5
+Tempo Restante: 10 ---------- Exec: 10 ---------- IO: 0
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 5
+Tempo Restante: 10 ---------- Exec: 10 ---------- IO: 0
+Memória: 4Mb ---------- Processo: 2
+Tempo Restante: 10 ---------- Exec: 10 ---------- IO: 0
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 5
+Tempo Restante: 10 ---------- Exec: 10 ---------- IO: 0
+Memória: 4Mb ---------- Processo: 2
+Tempo Restante: 10 ---------- Exec: 10 ---------- IO: 0
+Memória: 2Mb ---------- Processo: 1
+Tempo Restante: 25 ---------- Exec: 25 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #5 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: 2
+Tempo Restante: 10 ---------- Exec: 10 ---------- IO: 0
+Memória: 2Mb ---------- Processo: 1
+Tempo Restante: 25 ---------- Exec: 25 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+Processo : 3
+Tempo Restante: 69
+exec: 60 ----- io: 9
+Processo : 4
+Tempo Restante: 52
+exec: 40 ----- io: 12
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 3
+Tempo Restante: 69 ---------- Exec: 60 ---------- IO: 9
+Memória: 4Mb ---------- Processo: 2
+Tempo Restante: 10 ---------- Exec: 10 ---------- IO: 0
+Memória: 2Mb ---------- Processo: 1
+Tempo Restante: 25 ---------- Exec: 25 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #2 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: 3
+Tempo Restante: 69 ---------- Exec: 60 ---------- IO: 9
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: 1
+Tempo Restante: 25 ---------- Exec: 25 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+Processo : 4
+Tempo Restante: 52
+exec: 40 ----- io: 12
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 3
+Tempo Restante: 69 ---------- Exec: 60 ---------- IO: 9
+Memória: 4Mb ---------- Processo: 4
+Tempo Restante: 52 ---------- Exec: 40 ---------- IO: 12
+Memória: 2Mb ---------- Processo: 1
+Tempo Restante: 25 ---------- Exec: 25 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #1 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: 3
+Tempo Restante: 69 ---------- Exec: 60 ---------- IO: 9
+Memória: 4Mb ---------- Processo: 4
+Tempo Restante: 52 ---------- Exec: 40 ---------- IO: 12
+Memória: 2Mb ---------- Processo: 1
+Tempo Restante: 15 ---------- Exec: 15 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #3 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: 4
+Tempo Restante: 52 ---------- Exec: 40 ---------- IO: 12
+Memória: 2Mb ---------- Processo: 1
+Tempo Restante: 15 ---------- Exec: 15 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+Processo : 3
+Tempo Restante: 64
+exec: 55 ----- io: 9
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #4 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: 1
+Tempo Restante: 15 ---------- Exec: 15 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+Processo : 3
+Tempo Restante: 59
+exec: 55 ----- io: 4
+Processo : 4
+Tempo Restante: 47
+exec: 35 ----- io: 12
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #1 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+Processo : 3
+Tempo Restante: 55
+exec: 55 ----- io: 0
+Processo : 1
+Tempo Restante: 5
+exec: 5 ----- io: 0
+
+-----------------------Processos em IO-----------------------
+Processo : 4
+Tempo Restante: 37
+exec: 35 ----- io: 2
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 3
+Tempo Restante: 55 ---------- Exec: 55 ---------- IO: 0
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 3
+Tempo Restante: 55 ---------- Exec: 55 ---------- IO: 0
+Memória: 4Mb ---------- Processo: 1
+Tempo Restante: 5 ---------- Exec: 5 ---------- IO: 0
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #3 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: 1
+Tempo Restante: 5 ---------- Exec: 5 ---------- IO: 0
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+Processo : 4
+Tempo Restante: 37
+exec: 35 ----- io: 2
+Processo : 3
+Tempo Restante: 45
+exec: 45 ----- io: 0
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 37 ---------- Exec: 35 ---------- IO: 2
+Memória: 4Mb ---------- Processo: 1
+Tempo Restante: 5 ---------- Exec: 5 ---------- IO: 0
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 37 ---------- Exec: 35 ---------- IO: 2
+Memória: 4Mb ---------- Processo: 1
+Tempo Restante: 5 ---------- Exec: 5 ---------- IO: 0
+Memória: 2Mb ---------- Processo: 3
+Tempo Restante: 45 ---------- Exec: 45 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #1 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 37 ---------- Exec: 35 ---------- IO: 2
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: 3
+Tempo Restante: 45 ---------- Exec: 45 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 1
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #4 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 27 ---------- Exec: 25 ---------- IO: 2
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: 3
+Tempo Restante: 45 ---------- Exec: 45 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 1
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #3 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 27 ---------- Exec: 25 ---------- IO: 2
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: 3
+Tempo Restante: 35 ---------- Exec: 35 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 1
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #4 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: 3
+Tempo Restante: 35 ---------- Exec: 35 ---------- IO: 0
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+Processo : 4
+Tempo Restante: 22
+exec: 20 ----- io: 2
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 1
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #3 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+Processo : 4
+Tempo Restante: 20
+exec: 20 ----- io: 0
+Processo : 3
+Tempo Restante: 25
+exec: 25 ----- io: 0
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 1
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 20 ---------- Exec: 20 ---------- IO: 0
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+-----------------------Mapa de Alocação de Memória-----------------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 20 ---------- Exec: 20 ---------- IO: 0
+Memória: 4Mb ---------- Processo: 3
+Tempo Restante: 25 ---------- Exec: 25 ---------- IO: 0
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+-----------------------Fim Mapa de Alocação de Memória-----------------------
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #4 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 10 ---------- Exec: 10 ---------- IO: 0
+Memória: 4Mb ---------- Processo: 3
+Tempo Restante: 25 ---------- Exec: 25 ---------- IO: 0
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 1
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #3 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: 4
+Tempo Restante: 10 ---------- Exec: 10 ---------- IO: 0
+Memória: 4Mb ---------- Processo: 3
+Tempo Restante: 15 ---------- Exec: 15 ---------- IO: 0
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 1
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #4 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: 3
+Tempo Restante: 15 ---------- Exec: 15 ---------- IO: 0
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 1
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 4
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #3 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: 3
+Tempo Restante: 5 ---------- Exec: 5 ---------- IO: 0
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 1
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 4
+Tempo Restante: 0
+exec: 0 ----- io: 0
+
+----------------CPU: Imprimindo Informação do Processo----------------
+Processo #3 irá para CPU!
+----------------CPU: Terminou de Imprimir Informação do Processo----------------
+Memória: 8Mb ---------- Processo: NULL
+Memória: 4Mb ---------- Processo: NULL
+Memória: 2Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+Memória: 1Mb ---------- Processo: NULL
+
+-----------------------Processos na Fila de Prontos-----------------------
+
+-----------------------Processos em IO-----------------------
+
+-----------------------Processos Já Terminados-----------------------
+Processo : 5
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 2
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 1
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 4
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Processo : 3
+Tempo Restante: 0
+exec: 0 ----- io: 0
+Tempo Total Decorrido: 185
+Numero de iterações do while: 21

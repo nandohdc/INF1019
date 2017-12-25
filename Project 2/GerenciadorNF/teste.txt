@@ -1,0 +1,31 @@
+6
+Processo#1 - 2Mb
+3
+exec 10
+io 2
+exec 15
+Processo#2 - 1Mb
+3
+exec 15
+io 4
+exec 5
+Processo#3 - 7Mb
+3
+exec 5
+io 3
+exec 25
+Processo#4 - 3Mb
+5
+exec 20
+io 8
+exec 25
+io 2
+exec 5
+Processo#5 - 1Mb
+1
+exec 100
+Processo#6 - 5Mb
+3
+exec 10
+io 5
+exec 30

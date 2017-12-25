@@ -1,0 +1,111 @@
+*****************************************************************
+* Programa: Gerenciador de Memória				*
+*								*
+* Data: 18/11/2015						*
+* Autores: Fernando Homem da Costa (nandohdc@gmail.com)		*
+*	   Mateus Ribeiro de Castro (matcastro2004@yahoo.com.br)*
+*								*
+*****************************************************************
+Descrição do programa:
+
+O Trabalho 2 da disciplina INF1019 (2015.2) trata de desenvolver
+um gerenciador de memória para cada uma das rotinas desejadas:
+
+- First Fit
+- Best Fit
+- Worst Fit
+- Next Fit
+
+Na rotina First Fit os processos são colocados na memória sempre na primeira
+posição encontrada que seja possível alocar os mesmos. Para isso foi feito um 
+'for' que sempre  busca o espaço para o processo a partir da primeira partição.
+
+Na rotina Best Fit os processos são alocados na memória na posição vazia que
+seja mais ocupada pelo processo em questão. Portanto um processo de 1 MB só 
+entrará na partição de 8Mb se e somente se esta estiver vazia e todas as outras
+estiverem com processo.
+
+Na rotina Worst Fit os processos são alocados na memória na posição vazia que
+seja menos ocupada pelo processo em questão. Portanto um processo de 1 MB só 
+entrará na partição de 1Mb se e somente se esta estiver vazia e todas as outras
+estiverem com processo.
+
+Na rotina Next Fit os processos são alocados a partir do último lugar a ter sido 
+alocado um processo. Para isso é necessário guardar a posição na qual o último 
+processo foi inserido e buscar a partição a partir dessa. Lembrando que a next 
+fit é uma rotina circular. Se não achar a partir da última posição volta ao começo
+e procura até a última posição.
+
+A memória utilizada para o trabalho ficou dividida em 5 partições. Sendo elas 8 Mb,
+4 Mb, 2 Mb, 1 Mb e 1 Mb respectivamente.
+
+==> O Trabalho 2 é composto de:
+
+Arquivos Fontes:
+-SuperGerenciadorDeMemoriaV1.0.c (FIRST FIT)
+-SuperGerenciadorDeMemoriaV2.0.c (BEST FIT)
+-SuperGerenciadorDeMemoriaV3.0.c (WORST FIT)
+-SuperGerenciadorDeMemoriaV4.0.c (NEXT FIT)
+
+Log de Entrada (Testes):
+-teste.txt
+-teste1.txt
+-teste2.txt
+
+Logs de saída:
+-OutputFIRST.txt
+-OutputBEST.txt
+-OutputWORST.txt
+-OutputNEXT.txt
+
+-OutputFIRST1.txt
+-OutputBEST1.txt
+-OutputWORST1.txt
+-OutputNEXT1.txt
+
+-OutputFIRST2.txt
+-OutputBEST2.txt
+-OutputWORST2.txt
+-OutputNEXT2.txt
+
+==> Funcionamento do programa:
+
+Devido a organização da memória como descrita anteriormente, onde as partições estão 
+ordenadas e fixadas por tamanho, as rotinas de first fit, next fit e worst fit 
+apresentarão, senão sempre, em muitas vezes comportamentos bastante similares. 
+Visto que um processo na rotina de worst fit sempre busca as maiores partições, então
+sempre buscará na ordem em que a rotina first fit buscaria.
+Assim como no caso do next fit, que apesar de implementado de maneira diferente, devido
+a essa organização da memória, ocasionou na mesma resposta da first fit.
+
+Por outro lado, a rotina best fit se comportou de maneira diferente, visto que a mesma, 
+nessa configuração de memória, busca sua partição partindo da última para a primeira.
+Comportamento inverso das outras três rotinas. 
+
+==> Testes:
+
+Através dos testes foi tentado observar todos os casos de teste possível. Sendo eles,
+processo com uma única execução, processos com o tamanho da partição da memória, 
+processos com tamanhos diferentes dos das partições da memória, processos com várias
+execuções, pedidos de IO, swap in e swap out com a memória, fila de prontos vazia,
+memória completamente alocada com processos, entre outros.
+
+==> Resultados:
+
+Os resultados obtidos ocorreram conforme o esperado. Com todos os processos sendo 
+transferidos da fila de prontos para a memória, da memória para bloqueados, de 
+bloqueados para fila de prontos, da memória para fila de prontos e da memória para 
+terminados com seus tempos zerados. Ao fim do programa todos os processos se 
+encontram na fila de terminados e todas as outras filas encontram-se vazias. 
+
+Foi observado que só existem duas rotinas distintas, visto que para essa organização
+de memória com partições fixadas, as rotinas first fit, worst fit e next fit possuem
+o mesmo comportamento.
+
+Portanto, confrontando as rotinas de first fit e best fit foi observado através do log
+de saída que os processos ficam melhor organizados na memória, para os três casos de 
+teste, na rotina best fit. Pois neles mais processos ocupam a memória ao mesmo tempo,
+enquanto no first fit ocorrem mais casos de espera na fila de prontos para poder entrar
+na memória.
+
+Fim.
